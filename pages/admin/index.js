@@ -156,9 +156,9 @@ export default function Admin() {
 
   const createError = (error) => toast.error(`${error}`);
 
-  // const changeLocation = (e) => {
-  //   setMovieLocation(e.target.id);
-  // };
+  const changeLocation = (e) => {
+    setMovieLocation(e.target.id);
+  };
 
   useEffect(() => {
     dispatch(moviesActions.getLocationThunk());
@@ -329,7 +329,7 @@ export default function Admin() {
               <div className={styles["location-div-1"]}>
                 <Image className={styles[""]} src={location} alt="img" />
                 <p className={styles["location-text-1"]}>Purwokerto</p>
-                {/* <select name="" id="">
+                <select name="" id="">
                   <option value="0" selected>
                     Input Location
                   </option>
@@ -344,7 +344,7 @@ export default function Admin() {
                       </option>
                     );
                   })}
-                </select> */}
+                </select>
                 <Image
                   className={styles["location-img-1"]}
                   src={chevron}
